@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet">
+
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+        <a class="navbar-brand fw-bold" href="#">Recipe Book</a>
+        <div class="ms-auto d-flex align-items-center">
+          <button class="btn btn-primary me-2 addRecipes"
+            onclick="togglePopup()">Add Recipe</button>
+          <div class="input-group">
+            <input class="form-control" type="search" placeholder="Search"
+              id="searchInput" aria-label="Search" />
+            <button class="btn btn-outline-secondary" type="button"
+              onclick="searchRecipes()">Search</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container my-4">
+      <h3 class="mb-4 text-primary">All Recipes:</h3>
+      <div class="row" id="cardContainer"></div>
+    </main>
+
+    <!-- Add Recipe Popup Form -->
+    <div id="popupOverlay" class="overlay-container">
+      <div class="popup-box shadow p-4 rounded bg-white">
+        <h2 class="text-primary mb-3">Add Recipe</h2>
+        <form id="form" class="form-container">
+          <div class="mb-3">
+            <label class="form-label" for="name">Recipe Name</label>
+            <input class="form-control" type="text" id="name" name="r_name"
+              required placeholder="Enter recipe name">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="r_ing">Ingredients</label>
+            <textarea class="form-control" id="r_ing" name="r_ing" rows="3"
+              required placeholder="Enter ingredients..."></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="r_prep">Preparation Steps</label>
+            <textarea class="form-control" name="r_prep" id="r_prep" rows="4"
+              required placeholder="Describe preparation steps..."></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="img">Upload an Image</label>
+            <input class="form-control" type="file" id="img" name="img"
+              accept="image/*" required>
+          </div>
+
+          <button class="btn btn-success w-100 mb-2"
+            type="submit">Submit</button>
+          <button class="btn btn-secondary w-100" type="button"
+            onclick="togglePopup()">Close</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="social-links">
+        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>&copy; 2025 Recipe Book. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,243 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F9FB;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #87C0CD;
+}
+
+.navbar-brand {
+    margin-left: 8px;
+}
+
+.addRecipes {
+    margin-left: auto;
+    margin-right: 10px;
+    padding: 1px 20px; 
+    font-size: 12px;    
+    border-radius: 6px; 
+    background-color: #226597;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.addRecipes:hover {
+    background-color: #113F67;
+}
+.btn {
+    background-color: #226597;
+    color: white;
+}
+
+.heading {
+    margin: 15px;
+    font-size: 22px;
+}
+
+.card {
+    margin: 15px;
+    margin-top: 40px;
+}
+
+img {
+    height: 10em;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-open-popup {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #113F67;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-open-popup:hover {
+    background-color: #0e3355;
+}
+
+.overlay-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.popup-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 400px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #444;
+    text-align: left;
+}
+
+.form-input {
+    padding: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.btn-submit,
+.btn-close-popup {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-submit {
+    background-color: #226597;
+    color: #fff;
+}
+
+.btn-close-popup {
+    margin-top: 10px;
+    background-color: #ff7262;
+    color: #fff;
+}
+
+.btn-submit:hover,
+.btn-close-popup:hover {
+    background-color: #113F67;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.overlay-container.show {
+    display: flex;
+    opacity: 1;
+}
+
+.main {
+    text-align: center;
+    margin: 10px 20px;
+}
+
+.content {
+    margin: 20px;
+}
+
+.ingredient {
+    margin-left: 15px;
+}
+
+.image {
+    text-align: center;
+}
+
+.checkbox {
+    padding: 20px;
+}
+
+@media (max-width: 576px) {
+    .addRecipes {
+        margin: 10px auto;
+        display: block;
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    .navbar form {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .popup-box {
+        max-width: 90%;
+    }
+
+    .form-input,
+    .btn-submit,
+    .btn-close-popup {
+        font-size: 14px;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+}
+footer {
+    background-color: #fcfcfc;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-link {
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #f39c12;
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 10px;
+}
